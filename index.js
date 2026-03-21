@@ -1,20 +1,17 @@
-const express = require('express')
+import express from 'express'
+import usuarioRoutes from './routes/usuarioRoutes.js'
 
 // Crear la app
 const app = express()
 
-// Definir un puerto y arrancar el proyecto
+// Routing
+app.use('/auth', usuarioRoutes)
 
-app.get('/', function (req, res) {
-    res.send('Hola mundo desde Express')
-});
-
-app.get('/nosotros', function (req, res) {
-    res.send('Informacion de nosotros')
-});
+// Habilitar Pug
+app.set('view engine', 'pug')
+app.set('views', './views')
 
 // Definir un puerto y arrancar el proyecto
-
 const port = 3000;
 app.listen(port, () => {
     console.log(`El servidor esta funcionando en el puerto ${port}`)
