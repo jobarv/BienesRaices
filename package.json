@@ -11,7 +11,11 @@
     "server": "nodemon index.js"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "autoprefixer": "^10.4.27",
+    "nodemon": "^3.1.14",
+    "postcss": "^8.5.8",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.2.2"
   },
   "dependencies": {
     "express": "^5.2.1",
